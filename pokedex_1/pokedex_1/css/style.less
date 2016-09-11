@@ -1,0 +1,164 @@
+@basic-red: #E91E63;
+@basic-yellow: #E0E02D;
+@basic-gray: #949494;
+@secondary-gray: #999999;
+@basic-bug: #67AB9F;
+@basic-ghost: #7F628C;
+@basic-ground: #BDA971;
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+    .container-fluid {
+        .detail-container {
+            background-color: white;
+        }
+    }
+}
+
+.detail-types {
+    margin-top: 30px;
+}
+
+footer {
+    h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    text-align: left;
+    &:extend(header);
+}
+
+header {
+    background-color: @basic-red;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+.main-section {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.poke-desc {
+    h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: @basic-red;
+    }
+
+    .unmarked {
+        color: @basic-gray;
+    }
+
+    .marked {
+        .star-icon {
+            color: @basic-yellow;
+        }
+
+        .ball-icon {
+            color: @basic-red;
+        }
+    }
+
+    .desc-icons {
+        margin-top: 15px;
+        font-size: 3.3em;
+    }
+
+    .phys-traits {
+        color: @secondary-gray;
+        font-weight: bold;
+        font-size: 2.2em;
+    }
+
+    .short-desc {
+        color: darken(@secondary-gray,10%);
+        font-size: 1.6em;
+        margin-top: 20px;
+    }
+}
+
+.poke-note {
+    font-size: 30px;
+    color: @secondary-gray;
+}
+
+.poke-sprite {
+    width: 100%;
+    padding: 30px;
+    margin: 10px;
+}
+
+.poke-type {
+    border-radius: 10px;
+    border: 1px solid;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+/*Pokemon types*/
+.bug-type {
+    &:extend(.poke-type);
+    background-color: @basic-bug;
+}
+
+.ghost-type {
+    &:extend(.poke-type);
+    background-color: @basic-ghost;
+}
+
+.ground-type {
+    &:extend(.poke-type);
+    background-color: @basic-ground;
+}
+/*End pokemon types*/
+
+.sub-section-body {
+    padding: 15px;
+    font-size: 2.5em;
+}
+
+.section-body {
+    .left-side {
+        &:extend(.sub-section-body);
+        color: darken(@secondary-gray,10%);
+    }
+
+    .right-side {
+        &:extend(.sub-section-body);
+        color: lighten(@basic-gray,10%);
+    }
+
+    .middle-place {
+        &:extend(.sub-section-body);
+        color: black;
+    }
+
+    .div-line {
+        color: @secondary-gray;
+        border-top-width: 6px;
+    }
+}
+
+.section-title {
+    h1 {
+        color: white;
+        padding: 15px;
+        margin: 30px;
+        font-size: 2.5em;
+    }
+
+    background-color: lighten(@basic-gray,20%);
+}
